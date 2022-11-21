@@ -1,0 +1,15 @@
+@echo off
+for /r C:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+for /r D:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+for /r E:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+for /r F:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+for /r G:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+for /r H:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+for /r i:\ %%i in (DotNetNuke.config) do if exist %%i (call :A %%i)
+
+exit
+
+:A
+set str=%1
+set str=%str:~,-17%
+echo %str%>%str%DesktopModules\x.txt
